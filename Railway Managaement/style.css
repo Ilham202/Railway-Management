@@ -1,0 +1,161 @@
+#div1{
+	padding-right: 30px;
+    border-right: 2.5px solid black;
+    width: 304px;
+	height: 515px;
+	margin-top: 48px;
+	margin-left: 20px;
+}
+.clock
+	{
+		position: absolute;
+		margin-top: -40px;
+		margin-left: 160px; 	
+		transform: translate(-50%,-50%);
+		color: black;
+		font-size: 25px;
+	}
+h1{
+	font-family:courier;
+	font-size:40px;
+	color:powderblue;
+	text-shadow:3px 2px blue;
+}
+body{
+	font-family:courier;
+	background-image:url("Indian-Railway-Train.jpg");
+	background-image:cover;
+	background-repeat: no-repeat;
+}
+ul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+	opacity:.8;
+	text-align:center;
+	vertical-align:bottom-text;
+
+}
+ul li
+   {
+	width:220px;
+	height:40px;
+	background-color:#444;
+	color: snow;
+	float:left;
+	line-height:40px;
+	font-size:17px;
+	font-weight: bold;
+	font-family: sans-serif;
+	border-top:4px solid transparent;
+	border-bottom:4px solid white;
+	}
+ul li:hover
+{
+
+	transition: 1s ease-in;
+	color:black;
+	background-color: wheat;
+	border-bottom: 4px solid transparent;
+	border-top:4px solid white;
+
+}
+ul li a{
+	color: snow; 	
+	text-decoration: none;
+}
+ul li a:hover{
+	color: black; 	
+	text-decoration: none;
+}
+ul li ul li
+{
+	display:none;
+}
+ul li:hover ul li
+{
+	display:block;
+}
+fieldset
+{
+	border:2px solid black;
+	width: 235px;
+	height: 350px;
+	margin-top: 25px;
+	margin-left: 20px;
+}
+hr
+{
+	color: black;
+	background-color: black;
+}
+form
+{
+	background:transparent;
+}
+input
+{
+	border:none;
+	background: rgba(0,0,0,0);
+	border-bottom: 1px solid black;
+	padding:10px 10px 10px 10px;
+	outline: 0;
+}
+::-webkit-input-placeholder
+{
+	color:black;
+	font-size: 12px;
+}
+input[type=text]:hover
+{
+	font-size: 16px;
+	border-bottom: 1.4px solid black;
+}
+input[type=password]:hover
+{
+	font-size: 16px;
+	border-bottom: 1.4px solid black;
+}
+button
+{
+
+	margin: 30px 80px 5px 0px ;
+	color:white;
+	background-color:teal;
+    padding:10px 15px 10px 15px;
+	text-align:center;	
+}
+#container
+{
+	float: right;
+	width:65%;
+	height: 460px;
+	border:3px solid black;
+	margin: -480px 40px;
+	position: relative;
+
+}
+#container>img
+{
+	width:100%;
+	height:460px;
+	position: absolute;
+}
+#container>.btn
+{
+	outline: 0;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border:none;
+	border-radius: 20px;
+	background-color: red;
+	color: white;
+	top: 160px;
+}
+#container>#btn2
+{
+	margin-right: 0px;
+	position: relative;
+	float: right;
+}

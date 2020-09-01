@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Module</title>
+	<link rel="stylesheet" type="text/css" href="admin.css">
+</head>
+<body>
+<img src="Admin.png">
+<div class="box">
+<center><h1 style="color: lightpink;letter-spacing: 2.5px"><u>Admin Module</u></h1></center>
+<button style="margin-top:60px; margin-left:160px;padding: 18px 55px 18px 55px;color: orange;background-color: white;border-radius: 6px;border:2px solid orange;" name="button1" onclick="Add()">Add Train
+</button>
+<button style="margin-top: -100px;margin-left: 80px; padding: 18px 55px 18px 55px;color: orange;background-color: white;border-radius: 6px;border:2px solid orange;" name="button2" onclick="Edit()">Edit Train
+</button>
+<button style="margin-top: 80px; margin-left:160px;padding: 18px 30px 18px 30px;color: orange;background-color: white;border-radius: 6px;border:2px solid orange;" name="button3" onclick="Cancel()">Cancelled Tickets</button>
+<button style="margin-top: -100px;margin-left: 80px; padding: 18px 50px 18px 50px;color: orange;background-color: white;border-radius: 6px;border:2px solid orange;" name="button4" onclick="Complaint()">Complaints
+</button>
+<button style="margin-top: 80px;margin-left: 300px; padding: 18px 60px 18px 60px;color: orange;background-color: white;border-radius: 6px;border:2px solid orange" name="button5" onclick="Exit()">Exit</button>
+</div>
+<script type="text/javascript">
+	var button1 = document.getElementByName("button1");
+	var button2 = document.getElementByName("button2");
+    var button3 = document.getElementByName("button3");
+    var button4 = document.getElementByName("button4");
+    var button5 = document.getElementByName("button5");
+
+    function Add()
+    {
+    	open("file:///E:/Project/adddetails.html");
+    }
+
+    function Edit()
+    {
+    	open("file:///E:/Project/editdetails.html");
+    }
+    function Cancel()
+    {
+    	open("file:///E:/Project/canceltable.html");
+    }
+    function Complaint()
+    {
+    	alert("No Complaints to show");
+    }
+    function Exit()
+    {
+    	open("file:///E:/Project/Home%20page.html");
+    }
+</script>
+</body>
+</html>

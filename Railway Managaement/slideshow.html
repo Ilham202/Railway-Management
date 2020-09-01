@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="slide.css">
+</head>
+<body>
+<div id="container">
+<img class="slides" src="image1.jpg">
+<img class="slides" src="image2.jpg">
+<img class="slides" src="image3.jpg">
+<img class="slides" src="image4.jpg">
+<img class="slides" src="image5.jpg">
+<img class="slides" src="image6.jpg">
+<button class="btn" id="btn1" onclick="plus(-1)">&#10094</button>
+<button class="btn" id="btn2" onclick="plus(1)">&#10095</button>
+</div>
+</body>
+<script type="text/javascript">
+	var index=1;
+	function plus(n)
+	{
+		index=index+1;
+		slideimage(index);
+	}
+	slideimage(1);
+	function slideimage(n)
+	{
+		var i;
+        var x=document.getElementsByClassName('slides');
+        if(n > x.length)
+        {
+        	index=1;
+        };
+        if(n < 1)
+        {
+        	index=x.length;
+        };
+ 	    for(i=0;i<x.length;i++)
+ 	    {
+            x[i].style.display="none";
+ 	    } 
+ 	    x[index-1].style.display="block";
+ 	}
+</script>
+</html>

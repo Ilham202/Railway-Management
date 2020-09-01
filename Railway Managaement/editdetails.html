@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit train </title>
+    <link rel="stylesheet" type="text/css" href="edit.css">
+</head>
+<body>
+<img src="Admin.png">
+<div class="box">
+<center><h1><u>Edit Train Details</u></h1></center>
+<p style="font-size:18px; color:lightpink; margin-top:60px; margin-left: 40px; ">
+Train No</p>
+<input type="text" name="trainno" placeholder="Enter Train No" maxlength="6" required/>
+<p style="font-size:18px; color:lightpink; margin-top:-72px; margin-left: 378px; float: unset; ">
+Train Name</p>
+<input type="text" id="input2" name="trainname" placeholder="Enter Train Name" required/>
+<button id="btn1" name="save" onclick="Save()">Save</button><br>
+<input type="reset" name="reset" id="btn2" value="Reset"/><br>
+<button id="btn3" onclick="Exit()">Exit</button>
+<script type="text/javascript">
+	function Save()
+	{
+		alert("Train Edited Successfully !!!");
+	}
+	function Exit()
+	{
+		open("file:///E:/Project/Home%20page.html");
+	}
+</script>
+<p style="font-size:18px; color:lightpink; margin-top:-250px; margin-left: 40px; ">
+Starting Point </p>
+<select style="padding:5px 5px 5px 5px;margin-left: 40px; margin-top: 10px;">
+<option selected>Select</option>
+<OPTION> 
+DELHI</OPTION>
+<OPTION>LUCKNOW</OPTION>
+<OPTION>AGRA</OPTION>
+<OPTION>JAIPUR</OPTION>
+<OPTION>VARANASI</OPTION>
+<option>BAREILLY</option>
+<OPTION>BHOPAL</OPTION>
+<OPTION>MATHURA</OPTION>
+<OPTION>HARIDWAR</OPTION>
+<OPTION>CHANDIGARH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>BOKARO</OPTION>
+<OPTION>TRIPURA</OPTION>
+<OPTION>HOWRAH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>AMRITSAR</OPTION>
+<OPTION>MUMBAI</OPTION>
+<OPTION>KOLKATA</OPTION>
+<OPTION>RANCHI</OPTION>
+<OPTION>SILIGURI</OPTION>
+<OPTION>PUNE</OPTION>
+<OPTION>CHENNAI</OPTION>
+</select><br>
+<p style="font-size:18px; color:lightpink; margin-top:20px; margin-left: 40px;">
+Ending Point </p>
+<select style="padding:5px 5px 5px 5px;margin-left: 40px; margin-top: 5px;">
+<option selected>Select</option>
+<OPTION> 
+DELHI</OPTION>
+<OPTION>LUCKNOW</OPTION>
+<OPTION>AGRA</OPTION>
+<OPTION>JAIPUR</OPTION>
+<OPTION>VARANASI</OPTION>
+<option>BAREILLY</option>
+<OPTION>BHOPAL</OPTION>
+<OPTION>MATHURA</OPTION>
+<OPTION>HARIDWAR</OPTION>
+<OPTION>CHANDIGARH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>BOKARO</OPTION>
+<OPTION>TRIPURA</OPTION>
+<OPTION>HOWRAH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>AMRITSAR</OPTION>
+<OPTION>MUMBAI</OPTION>
+<OPTION>KOLKATA</OPTION>
+<OPTION>RANCHI</OPTION>
+<OPTION>SILIGURI</OPTION>
+<OPTION>PUNE</OPTION>
+<OPTION>CHENNAI</OPTION>
+</select><br>
+<p style="font-size:18px; color:lightpink; margin-top:20px; margin-left: 40px;">
+New Travel Fare</p>
+<input type="text" name="Fare"  maxlength="4" placeholder="Enter Fare" required/>
+</div>
+</body>
+</html>

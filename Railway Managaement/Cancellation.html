@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cancel.css">
+<title>Cancellation Page</title>
+</head>
+<body>
+<img src="images.jpg">
+<br><br><br><br>
+<h1>Ticket Cancellation</h1>
+<div class="box">
+<p>Enter username :</p>
+<input type="text" name="user" id="username" required/><br><br>
+<div class="error" id="user_error"></div><br>
+<p>Enter PNR no :</p>
+<input type="text" name="pnrrno" id="pnr" maxlength="10" required/><br><br><br>
+<div class="error" id="pnr_error"></div>
+<button name="cancel" id="btn1" onclick="cancel()">Cancel</button>
+<button name="exit" id="btn2" onclick="exit()">Exit</button>
+</div>
+<script type="text/javascript">
+	var  username = document.getElementById("username");
+	var  pnr = document.getElementById("pnr");
+	var  user_error = document.getElementById("user_error");
+	var  pnr_error = document.getElementById("pnr_error");
+    //cancel function
+	function cancel()
+	{
+		if(username.value=="")
+    	{
+    		username.style.border = "1px solid white";
+    		user_error.style.color = "white";
+    	    user_error.textContent = "Username is required*";
+            username.focus();
+            return false;
+         }
+         if(pnr.value=="")
+    	{
+    		pnr.style.border = "1px solid white";
+    		pnr_error.style.color = "white";
+    	    pnr_error.textContent = "PNR is required*";
+            pnr.focus();
+            return false;
+         }
+         if(pnr.value.length != 10)
+         {
+         	alert("Enter 10 digit PNR no");
+         }  
+		else
+		{
+			confirm("Your ticket will be cancelled");
+			alert("Ticket cancelled");
+			open("file:///E:/Project/Cancellation.html");				
+		    return true;
+		}
+	}
+	function exit()
+	{
+		open("file:///E:/Project/Home%20page.html");
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+<head>
+<title> HOME PAGE</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<marquee bgcolor="black" scrollAmount="3" style="opacity: 0.3;"><h1 align="center"><u>Railway Reservation</u>------------------------- <u>Railway Reservation</u>-----------------------<u>Railway Reservation</u>-----------------------</h1></marquee>
+<body>
+<ul>
+<li><a href="file:///E:/Project/Running%20Status.htm" title="Live Running Status" target="_blank">RUNNING STATUS</a></li>
+<li><a href="file:///E:/Project/Cancellation.html" title="Cancel Tickets" target="_blank">CANCELLATION</a></li>
+<li><a href="file:///E:/Project/booking.html" title="Online Booking" target="_blank">BOOK TICKETS</a></li>
+<li><a href="file:///E:/Project/register.html" title="Register Yourself">SIGN-UP</a></li>
+<li><a href="file:///E:/Project/contact.html" title="Contact Us" target="_blank">CONTACT US</a></li>
+<li>RULES</li>
+</ul>
+<div id="div1">
+<br>
+<fieldset>
+<legend style="color:black;font-weight: bold;font-size: 22px;">LOG-IN</legend>
+<form class="form" method="post"  style="background:transparent;" onsubmit="return validate()">
+<p style="color: black;">Username :</p>
+<input type="text" placeholder="Enter username" id="name" title="Enter your name"></input><br><br>
+<p style="color: black;"> Password :</p>
+<input type="password" placeholder="Enter password" id="password" title="Enter password"></input></br><br><br>
+<input type="checkbox" name="show" id="check" onclick="showpass()"/>Show Password
+<button name="login" onclick="Admin()">LOG-IN</button>
+</form>
+</fieldset>
+</div>
+<div id="myclock" class="clock"></div>
+<script type="text/javascript">
+  showTime();
+  function showTime()
+  {
+  var date = new Date();
+  var h = date.getHours();
+  var m = date.getMinutes();
+  var s = date.getSeconds();
+  var r = "AM";
+
+  if (h==0) {h=12;}
+  if (h>12)
+   {
+    h=h-12;
+    r = "PM";
+   }
+    h = (h<10)?"0"+h:h;
+    m = (m<10)?"0"+m:m;
+    s = (s<10)?"0"+s:s;
+  var time = h+":"+m+":"+s+" "+r;
+  document.getElementById("myclock").innerHTML = time;
+  document.getElementById("myclock").textContent = time;
+    setTimeout(showTime,1000);
+    }
+</script>
+<script type="text/javascript">
+	function showpass()
+	{
+      var password = document.getElementById('password');
+      if(document.getElementById('check').checked)
+      {
+      	password.setAttribute('type','text');
+      }
+      else
+      {
+      	password.setAttribute('type','password');
+      }
+	}
+    function Admin()
+    {
+        if(document.getElementById('name').value == "azeez222" && document.getElementById('password').value == "azeez@123")
+        {
+         open("file:///E:/Project/adminmodule.html");
+        }
+        else
+        {
+            alert('Wrong Details');
+        }
+    }
+</script>
+<div id="container">
+<img class="slides" src="new.jpg">
+<img class="slides" src="image1.jpg">
+<img class="slides" src="image2.jpg">
+<img class="slides" src="image3.jpg">
+<img class="slides" src="image4.jpg">
+<img class="slides" src="image5.jpg">
+<img class="slides" src="image6.jpg">
+<button class="btn" id="btn1" onclick="plus(-1)">&#10094</button>
+<button class="btn" id="btn2" onclick="plus(1)">&#10095</button>
+</div>
+<script type="text/javascript">
+	var index=1;
+	function plus(n)
+	{
+		index=index+n;
+		slideimage(index);
+	}
+	slideimage(1);
+	function slideimage(n)
+	{
+		var i;
+        var x=document.getElementsByClassName('slides');
+        if(n > x.length)
+        {
+        	index=1;
+        };
+        if(n < 1)
+        {
+        	index=x.length;
+        };
+ 	    for(i=0;i<x.length;i++)
+ 	    {
+            x[i].style.display="none";
+ 	    } 
+ 	    x[index-1].style.display="block";
+ 	}
+ 	auto();
+ 	function auto()
+ 	{
+ 		var i;
+        var x=document.getElementsByClassName('slides');
+         for(i=0;i<x.length;i++)
+ 	    {
+            x[i].style.display="none";
+ 	    } 
+ 	    if(index > x.length){index=1}
+ 	    x[index-1].style.display="block";
+ 	    index++;
+        setTimeout(auto,5000);
+ 	}
+</script>
+</body>
+<hr>
+</html>
+
+
+

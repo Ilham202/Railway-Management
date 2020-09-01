@@ -1,0 +1,52 @@
+#box
+{
+	width: 800px;
+	height: 600px;
+	border: 2px solid teal;
+	margin: 140px 250px;
+	background-image: url("adimg.jpg");
+}
+body
+{
+ background-color: black;
+ background-image: url("reservation.jpg");
+ background-repeat: no-repeat;
+ background-size: 1400px 700px;
+ font-family: palatino;
+ color: teal;
+}
+input
+{
+	outline:0; 
+	background: rgba(0,0,0,0);
+	padding:15px;
+	border: none;
+	color: teal;
+	text-decoration: none;
+	border-bottom: 1.2px solid black;
+	margin-top: 15px; 
+}
+p
+{
+	margin: 10px 20px;
+}
+::-webkit-input-placeholder
+{
+	color: teal;
+	letter-spacing: 1px;
+}
+input[type=date]
+{
+	color: teal;
+}
+.btn
+{
+	padding:15px 35px 15px 35px;
+	color: white;
+	text-align: center;
+	background-color: cadetblue;
+	margin:40px 300px;
+}
+.error{
+	color: red;
+}

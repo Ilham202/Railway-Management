@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booking module</title>
+<link rel="stylesheet" type="text/css" href="book.css">
+</head>
+<body>
+<div id="box">
+<p>
+Name :<input type="text" id="namee" name="name" placeholder="Enter name" required><span style="color: red;">*</span><br>
+<span class="error" id="e-name"></span><br>
+E-mail :<input type="email" id="email" name="e-mail" placeholder="Enter E-mail" required>
+<span style="color: red;">*</span><br>
+<span class="error" id="email_error"></span><br>
+<img src="logo.jpg" style="width :350px; height: 340px; float: right;">
+Phone No :<input type="digits" name="phoneno" placeholder="Enter Mobile No" maxlength="10" required><span style="color: red;">*</span><br>
+Date : <input type="date" id="datee" name="dob" required><br>
+Train no :<input type="text" id="train" name="trainnno" maxlength="5" required><span style="color: red;">*</span><span style="color: #d2443c;">(Max. 5 digits)</span><br>
+<span class="error" id="train_error"></span><br><br>
+From :<SELECT name="CITY">
+<OPTION SELECTED>
+Select</OPTION> 
+<OPTION>DELHI</OPTION>
+<OPTION>LUCKNOW</OPTION>
+<OPTION>AGRA</OPTION>
+<OPTION>JAIPUR</OPTION>
+<OPTION>VARANASI</OPTION>
+<option>BAREILLY</option>
+<OPTION>BHOPAL</OPTION>
+<OPTION>MATHURA</OPTION>
+<OPTION>HARIDWAR</OPTION>
+<OPTION>CHANDIGARH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>BOKARO</OPTION>
+<OPTION>TRIPURA</OPTION>
+<OPTION>HOWRAH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>AMRITSAR</OPTION>
+<OPTION>MUMBAI</OPTION>
+<OPTION>KOLKATA</OPTION>
+<OPTION>RANCHI</OPTION>
+<OPTION>SILIGURI</OPTION>
+<OPTION>PUNE</OPTION>
+<OPTION>CHENNAI</OPTION></SELECT>
+To :<SELECT name="to">
+<OPTION SELECTED>
+Select</OPTION> 
+<OPTION>DELHI</OPTION>
+<OPTION>LUCKNOW</OPTION>
+<option>BAREILLY</option>
+<OPTION>BHOPAL</OPTION>
+<OPTION>MATHURA</OPTION>
+<OPTION>HARIDWAR</OPTION>
+<OPTION>CHANDIGARH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>BOKARO</OPTION>
+<OPTION>TRIPURA</OPTION>
+<OPTION>AGRA</OPTION>
+<OPTION>JAIPUR</OPTION>
+<OPTION>VARANASI</OPTION>
+<OPTION>HOWRAH</OPTION>
+<OPTION>JALANDHAR</OPTION>
+<OPTION>AMRITSAR</OPTION>
+<OPTION>MUMBAI</OPTION>
+<OPTION>KOLKATA</OPTION>
+<OPTION>RANCHI</OPTION>
+<OPTION>SILIGURI</OPTION>
+<OPTION>PUNE</OPTION>
+<OPTION>CHENNAI</OPTION>
+</SELECT><br><br><br>
+Adults :
+<select name="adults">
+<option>Select</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+</select>
+Child :
+<select name="adults">
+<option>Select</option>
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+</p><br>
+<input type="button" class="btn" id="submit" onclick="javascript:show()" value="Reserve">
+
+</div>
+.<div id ="result" style="display: none;">
+	<TABLE style="width: 80%; height: 200px; margin-top: 80px;margin-left: 100px; border: 2px solid black;background:white;" >
+	<header align="center" style="font-size: 50px;"><u>BILL</u></header>
+	<th style="border-bottom: 1px solid black;border-right:1px  solid black ;" >Name</th>
+    <th style="border-bottom: 1px solid black;border-right:1px  solid black ;" >Train No</th>
+    <th style="border-bottom: 1px solid black;border-right: 1px  solid black;">Date Of Journey</th> 
+	<th style="border-bottom: 1px solid black;border-right: 1px  solid black;">Fare</th>
+	<tr rowspan="3">
+	<td id="na" style="border-right: 1px solid black;text-align: center;">Dummy Name</td>
+	<td id="tn" style="border-right: 1px solid black;text-align: center;">Dummy Train</td>
+	<td id="da" style="border-right: 1px solid black;text-align: center;">Dummmy date</td>
+	<td id="pr" style="border-right: 1px solid black;text-align: center;">Dummy Price</td>
+	</tr>
+</TABLE>
+
+</div>
+</div>
+
+<script>
+	var na = document.getElementById('na');
+	var da = document.getElementById('da');
+	var pr = document.getElementById('pr');
+	var tn = document.getElementById('tn');
+	function show() {
+		if(validate()){
+
+			document.getElementById('result').style.display = 'initial';
+			document.getElementById('box').style.display = 'none';
+			na.innerHTML =  document.getElementById('namee').value;
+			tn.innerHTML =  document.getElementById('train').value;
+			da.innerHTML =  document.getElementById('datee').value;
+			pr.innerHTML =  "Rs . 516";
+		} 
+	}
+	function validate(){
+		if(document.getElementById('namee').value == ""){
+			document.getElementById('e-name').innerHTML = "Enter Name First*";
+			return false;
+		}
+		if(document.getElementById('email').value == "")
+		{
+			document.getElementById('email_error').innerHTML = "Enter E-mail*";
+		    return false;
+		 }
+		 
+		 if(document.getElementById('train').value == "")
+		{
+			document.getElementById('train_error').innerHTML = "Enter Train no*";
+		    return false;
+		 }
+		 else{
+
+			document.getElementById('e-name').innerHTML = "";
+			document.getElementById('email_error').innerHTML = "";
+			document.getElementById('train_error').innerHTML = "";
+			return true;
+		}
+		 
+	}
+</script>-
+</body>
+</html>a
